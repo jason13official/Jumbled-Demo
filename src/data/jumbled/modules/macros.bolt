@@ -1,0 +1,10 @@
+macro play_sound_broadcast sound=minecraft:resource_location:
+    playsound sound player @a
+
+# Plays a sound to all players at their own position (with default vol/pitch)
+macro play_sound_all sound=minecraft:resource_location:
+    execute as @a at @s run playsound sound master @s ~ ~ ~ 1 1
+
+# Plays a sound to all players at their own position (with custom vol/pitch)
+macro play_sound_all sound=minecraft:resource_location vol=brigadier:float pitch=brigadier:float:
+    execute as @a at @s run playsound sound master @s ~ ~ ~ vol pitch

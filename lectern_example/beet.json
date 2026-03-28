@@ -1,0 +1,12 @@
+{
+    "pipeline": [
+        "lectern"
+    ],
+    "meta": {
+        "lectern": {
+            "load": [
+                "*.md"
+            ]
+        }
+    }
+}

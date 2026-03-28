@@ -9,4 +9,11 @@ scoreboard objectives add deaths deathCount
 unless score fake lives = fake lives:
     score_obj = STARTING_LIVES
 
+tellraw @a [
+    {"text":"[Jumbled] ","color":"green"},
+    {"text":"Lives: ","color":"gray"},
+    {"score":{"name":f"{fake}","objective":f"{lives}"},"color":"yellow","bold":true},
+    {"text":f"/{STARTING_LIVES}","color":"gray"}
+]
+
 function jumbled:setup_bossbar

@@ -1,0 +1,14 @@
+{
+    "name": "Jumbled",
+    "description": "Jumbled SMP Datapack",
+    "require": [
+        "bolt"
+    ],
+    "data_pack": {
+        "load": ["src"],
+        "pack_format": 6
+    },
+    "pipeline": ["mecha"],
+    "output": "build",
+    "minecraft": "1.16.5"
+}

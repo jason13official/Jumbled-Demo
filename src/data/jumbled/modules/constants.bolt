@@ -1,0 +1,6 @@
+fake = "jumbled_fake"
+deaths = "jumbled_deaths"
+lives = "jumbled_lives"
+
+STARTING_LIVES = 500
+BOSSBAR_ID = "jumbled:lives"

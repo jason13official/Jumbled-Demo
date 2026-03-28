@@ -1,0 +1,25 @@
+from contextlib import contextmanager
+
+class Score:
+
+    x = 3
+
+    def __init__(self, player, objective):
+        self.player = player
+        self.obj = objective
+
+    # score = -1
+    def __rebind__(self, rhs):
+        if isinstance(rhs, Score):
+            scoreboard players operation self.player self.obj = rhs.player rhs.obj
+        else:
+            scoreboard players set self.player self.obj int(rhs)
+        return self
+    
+    def remove(self, n):
+        scoreboard players remove self.player self.obj n
+
+    @contextmanager
+    def matches(self, range_str):
+        if score self.player self.obj matches range_str:
+            yield True

@@ -1,7 +1,12 @@
 from jumbled:constants import deaths, lives, fake, STARTING_LIVES, BOSSBAR_ID
+from jumbled:score import Score
+
+score_obj = Score(fake, lives)
 
 execute as @a[scores={deaths=1..}] run function jumbled:on_death
-execute if score fake lives matches ..0 run function jumbled:game_over
+
+with score_obj.matches("..0"):
+    function jumbled:game_over
 
 bossbar set BOSSBAR_ID players @a
 execute store result bossbar BOSSBAR_ID value run scoreboard players get fake lives

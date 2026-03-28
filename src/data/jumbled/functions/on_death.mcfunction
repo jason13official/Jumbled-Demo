@@ -1,4 +1,7 @@
 from jumbled:constants import deaths, lives, fake, STARTING_LIVES, BOSSBAR_ID
+from jumbled:score import Score
 
-scoreboard players remove fake lives 1
+score_obj = Score(fake, lives)
+score_obj.remove(1)
+
 scoreboard players reset @s deaths

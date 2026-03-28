@@ -1,9 +1,4 @@
 from jumbled:constants import deaths, lives, fake, STARTING_LIVES, BOSSBAR_ID
-from jumbled:score import Score
-
-score_obj = Score(fake, lives)
-
-say score_obj.x
 
 def setbbMax(value):
     bossbar set BOSSBAR_ID max value
